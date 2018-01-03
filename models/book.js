@@ -3,7 +3,11 @@ var mongoose = require('mongoose'),
 
 var BookSchema = new Schema({
   title: String,
-  author: String,
+  // Pulling in information from the author schema set-up in author.js
+  author: {
+  	type: Schema.Types.ObjectId,
+  	ref: 'Author' 
+  },
   image: String,
   releaseDate: String
 });

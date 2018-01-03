@@ -18,6 +18,7 @@ $(document).ready(function(){
     error: handleError
   });
 
+// Very Common design form prevent default etc....
   $('#newBookForm').on('submit', function(e) {
     e.preventDefault();
     $.ajax({
